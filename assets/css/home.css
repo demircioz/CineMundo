@@ -1,0 +1,188 @@
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  font-family: Gotham, sans-serif;
+  background: linear-gradient(to bottom, #ffffff, #e6f0ff, #034b91) no-repeat fixed;
+  color: #000;
+}
+
+body {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.page-wrapper {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 1em 2em;
+  box-sizing: border-box;
+}
+
+.search-container {
+  display: flex;
+  flex-direction: column;
+  gap: 0.8rem;
+}
+
+.search-form {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.search-input {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  outline: none;
+  min-width: 200px;
+}
+
+.genre-select {
+  padding: 0.8rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 12px;
+  outline: none;
+}
+
+.search-btn {
+  background: #034b91;
+  border: none;
+  padding: 0.8rem;
+  border-radius: 12px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.3s ease;
+}
+
+.search-btn img {
+  width: 20px;
+  height: 20px;
+  filter: brightness(0) invert(1);
+}
+
+.search-btn:hover {
+  background: #02356c;
+}
+
+.sort-buttons {
+  display: flex;
+  gap: 0.5rem;
+}
+
+.sort-btn {
+  flex: 1;
+  padding: 0.6rem 1rem;
+  font-size: 0.95rem;
+  border: 1px solid #034b91;
+  border-radius: 12px;
+  background: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+
+.sort-btn:hover {
+  background: #034b91;
+  color: #fff;
+}
+
+.series-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(160px, 1fr));
+  gap: 1.5rem;
+  margin-top: 1.5rem;
+}
+
+.serie-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.serie-card {
+  background: #fff;
+  border-radius: 12px;
+  padding: 1rem;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  transition: transform 0.2s ease;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.serie-card:hover {
+  transform: translateY(-5px);
+}
+
+.serie-card h3 {
+  margin: 0.5rem 0 0.3rem;
+  font-size: 1rem;
+  line-height: 1.3;
+}
+
+.poster-placeholder img {
+  width: 100%;
+  height: auto;
+  max-height: 250px;
+  object-fit: cover;
+  border-radius: 6px;
+}
+
+.no-poster {
+  background-color: #eee;
+  height: 250px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #999;
+  font-size: 0.9rem;
+}
+
+.season-count {
+  margin-top: 0.5rem;
+  font-style: italic;
+  font-weight: bold;
+  color: #333;
+}
+
+.no-result {
+  grid-column: 1 / -1;
+  text-align: center;
+  font-size: 1.2rem;
+  color: #444;
+  padding: 2rem 1rem;
+  font-style: italic;
+}
+
+@media (max-width: 600px) {
+  .search-form {
+    flex-direction: column;
+    align-items: stretch;
+  }
+  .sort-buttons {
+    flex-direction: column;
+  }
+  .series-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+}

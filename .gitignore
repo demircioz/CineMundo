@@ -1,0 +1,30 @@
+# --- macOS ---
+.DS_Store
+
+# --- IDEs ---
+
+# PhpStorm
+.idea/
+*.iml
+
+# VS Code
+.vscode/
+
+# --- PHP ---
+vendor/
+.env
+.env.*
+*.log
+*.cache
+
+# --- Autres fichiers à ignorer courants ---
+*.bak
+*.tmp
+*.sql
+*.sqlite
+*.zip
+*.tar.gz
+*.tgz
+
+# --- CodeIgniter3 system files ---
+system/

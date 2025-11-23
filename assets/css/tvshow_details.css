@@ -1,0 +1,297 @@
+@font-face {
+  font-family: 'Gotham';
+  src: url('../fonts/Gotham.woff2') format('woff2');
+}
+
+html, body {
+  margin: 0;
+  padding: 0;
+  font-family: 'Gotham', sans-serif;
+  background: linear-gradient(to bottom, #ffffff, #e6f0ff);
+  min-height: 100%;
+}
+
+.page-wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+}
+
+main {
+  flex: 1;
+}
+
+.tvshow-details-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 3rem 2rem;
+}
+
+.tvshow-header {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  align-items: flex-start;
+}
+
+.tvshow-poster img {
+  width: 100%;
+  max-width: 500px;
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.2);
+}
+
+.btn-watch {
+  display: block;
+  width: 100%;
+  max-width: 300px;
+  margin: 1rem auto 0;
+  padding: 0.75rem;
+  background-color: #007bff;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 4px;
+  font-size: 1rem;
+  font-weight: bold;
+  text-align: center;
+  transition: transform 0.2s;
+}
+.btn-watch:hover {
+  transform: scale(1.05);
+}
+
+.tvshow-meta {
+  flex: 1;
+  min-width: 200px;
+}
+
+.tvshow-meta h1 {
+  margin: 0;
+  font-size: 3.2rem;
+  color: #000;
+}
+
+.original-title {
+  margin: 0.75rem 0;
+  font-size: 1.4rem;
+  color: #555;
+}
+
+.season-count {
+  margin: 0.75rem 0;
+  font-weight: bold;
+  font-size: 1.4rem;
+}
+
+.overview {
+  margin: 1.25rem 0;
+  line-height: 1.6;
+  font-size: 1.25rem;
+}
+
+.sort-detail {
+  margin: 2rem 0 1rem;
+  text-align: center;
+}
+
+.sort-btn-detail {
+  padding: 0.6rem 1.2rem;
+  font-size: 1rem;
+  border: 1px solid #034b91;
+  border-radius: 8px;
+  background: #fff;
+  cursor: pointer;
+  transition: background 0.2s ease, color 0.2s ease;
+}
+.sort-btn-detail:hover {
+  background: #034b91;
+  color: #fff;
+}
+
+.seasons-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, 160px);
+  gap: 3rem;
+  margin: 2rem auto;
+  justify-content: center;
+  justify-items: center;
+}
+
+.season-link {
+  text-decoration: none;
+  color: inherit;
+}
+
+.season-card {
+  width: 160px;
+  background: #fff;
+  border-radius: 8px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
+  padding: 1rem;
+  text-align: center;
+  transition: transform 0.2s;
+}
+.season-card:hover {
+  transform: translateY(-4px);
+}
+
+.season-number {
+  font-weight: bold;
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+
+.season-poster img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+  border-radius: 4px;
+  box-shadow: 0 1px 4px rgba(0,0,0,0.2);
+}
+
+.series-reviews {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-top: 2rem;
+}
+
+.series-reviews h2 {
+  color: #034b91;
+  margin-bottom: 1rem;
+}
+
+.no-reviews {
+  font-style: italic;
+  color: #666;
+}
+
+.reviews-list {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.review-card {
+  border-left: 4px solid #034b91;
+  padding: 0;
+  background: #f9faff;
+  border-radius: 4px;
+  overflow: hidden;
+  display: flex;
+  flex-direction: column;
+}
+
+.review-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0.75rem 1rem;
+  background: linear-gradient(to right, #034b91, #7abaff);
+}
+.review-header .review-meta time {
+  color: #fff;
+}
+.review-header .review-author {
+  color: #fff;
+  margin: 0;
+}
+
+.star-rating {
+  display: flex;
+  gap: 0.2rem;
+}
+.star {
+  width: 1.2rem;
+  height: 1.2rem;
+}
+.star--full path,
+.star--half stop:first-child {
+  fill: #f5c518;
+}
+.star--empty path {
+  stroke: #ccc;
+}
+
+.review-comment {
+  margin: 0.75rem 1rem;
+  line-height: 1.4;
+  color: #444;
+}
+
+.add-review {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  margin-top: 2rem;
+}
+
+.add-review h2 {
+  color: #034b91;
+  margin-bottom: 1rem;
+}
+
+.review-form {
+  display: grid;
+  gap: 1rem;
+}
+
+.review-form label {
+  font-weight: bold;
+  color: #333;
+}
+
+.review-form select,
+.review-form textarea {
+  width: 100%;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-family: inherit;
+}
+
+.btn-submit-review {
+  padding: 0.6rem 1.2rem;
+  background-color: #007bff;
+  color: #fff;
+  border: none;
+  border-radius: 4px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background 0.2s;
+}
+.btn-submit-review:hover {
+  background-color: #0056b3;
+}
+
+.must-login {
+  font-style: italic;
+  color: #666;
+}
+
+.must-login a {
+  color: #007bff;
+  text-decoration: none;
+  font-weight: bold;
+}
+.must-login a:hover {
+  text-decoration: underline;
+}
+
+@media (max-width: 600px) {
+  .tvshow-header {
+    flex-direction: column;
+    align-items: center;
+  }
+  .tvshow-meta {
+    text-align: center;
+  }
+  .sort-detail {
+    margin: 1rem 0;
+  }
+  .seasons-grid {
+    grid-template-columns: repeat(auto-fill, minmax(140px, 1fr));
+  }
+}
